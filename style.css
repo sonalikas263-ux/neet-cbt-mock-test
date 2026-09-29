@@ -1,0 +1,623 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f5f7;
+    color: #222;
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-container,
+.instruction-container,
+.result-container {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+
+.login-box,
+.instruction-box,
+.result-box {
+
+    background: white;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    padding: 40px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+
+}
+
+
+h1 {
+
+    text-align: center;
+
+    margin-bottom: 10px;
+
+}
+
+
+.subtitle {
+
+    text-align: center;
+
+    color: #777;
+
+    margin-bottom: 30px;
+
+}
+
+
+.login-box label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+}
+
+
+.login-box input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    margin-bottom: 20px;
+
+    font-size: 16px;
+
+}
+
+
+button {
+
+    border: none;
+
+    background: #1976d2;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+}
+
+
+button:hover {
+
+    background: #125ca5;
+
+}
+
+
+.error {
+
+    color: red;
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================
+   INSTRUCTIONS
+========================= */
+
+.instruction-box h2 {
+
+    margin: 25px 0 15px;
+
+}
+
+
+.instruction-box ul {
+
+    padding-left: 25px;
+
+    line-height: 1.9;
+
+}
+
+
+.student-info {
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: #f1f5f9;
+
+    border-radius: 6px;
+
+}
+
+
+.start-btn {
+
+    display: block;
+
+    margin: 25px auto 0;
+
+    background: #198754;
+
+}
+
+
+.start-btn:hover {
+
+    background: #146c43;
+
+}
+
+
+/* =========================
+   EXAM HEADER
+========================= */
+
+.exam-header {
+
+    height: 75px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+
+.exam-header h2 {
+
+    margin-bottom: 5px;
+
+}
+
+
+#studentDisplay {
+
+    color: #666;
+
+}
+
+
+.timer-box {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    background: #fff3cd;
+
+    padding: 12px 18px;
+
+    border-radius: 6px;
+
+}
+
+
+/* =========================
+   EXAM
+========================= */
+
+.exam-container {
+
+    display: grid;
+
+    grid-template-columns: 1fr 300px;
+
+    min-height: calc(100vh - 75px);
+
+}
+
+
+.question-section {
+
+    padding: 25px;
+
+    background: white;
+
+}
+
+
+.question-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #ddd;
+
+    font-weight: bold;
+
+}
+
+
+.question-box {
+
+    padding: 25px 0;
+
+}
+
+
+.question-box h3 {
+
+    margin-bottom: 25px;
+
+    line-height: 1.5;
+
+}
+
+
+.option {
+
+    display: block;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    margin-bottom: 12px;
+
+    cursor: pointer;
+
+}
+
+
+.option:hover {
+
+    background: #f1f5f9;
+
+}
+
+
+.option input {
+
+    margin-right: 10px;
+
+}
+
+
+.navigation {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 30px;
+
+}
+
+
+.clear-btn {
+
+    background: #6c757d;
+
+}
+
+
+.clear-btn:hover {
+
+    background: #565e64;
+
+}
+
+
+/* =========================
+   PALETTE
+========================= */
+
+.palette-section {
+
+    background: #f8f9fa;
+
+    padding: 20px;
+
+    border-left: 1px solid #ddd;
+
+}
+
+
+.palette-section h3 {
+
+    margin-bottom: 20px;
+
+}
+
+
+.legend {
+
+    margin-bottom: 20px;
+
+    line-height: 2;
+
+}
+
+
+.legend-box {
+
+    display: inline-block;
+
+    width: 18px;
+
+    height: 18px;
+
+    margin-right: 7px;
+
+    vertical-align: middle;
+
+    border-radius: 3px;
+
+}
+
+
+.legend-box.answered {
+
+    background: #198754;
+
+}
+
+
+.legend-box.unattempted {
+
+    background: #dc3545;
+
+}
+
+
+.legend-box.current {
+
+    background: #1976d2;
+
+}
+
+
+.question-palette {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 8px;
+
+}
+
+
+.question-palette button {
+
+    width: 100%;
+
+    padding: 10px 0;
+
+}
+
+
+.question-palette button.answered {
+
+    background: #198754;
+
+}
+
+
+.question-palette button.unattempted {
+
+    background: #dc3545;
+
+}
+
+
+.question-palette button.current {
+
+    background: #1976d2;
+
+    border: 3px solid #0d47a1;
+
+}
+
+
+.submit-btn {
+
+    width: 100%;
+
+    margin-top: 30px;
+
+    background: #dc3545;
+
+}
+
+
+.submit-btn:hover {
+
+    background: #b02a37;
+
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result-box {
+
+    text-align: center;
+
+}
+
+
+.score {
+
+    margin: 30px 0;
+
+}
+
+
+.score h3 {
+
+    color: #666;
+
+}
+
+
+#marks {
+
+    font-size: 60px;
+
+    font-weight: bold;
+
+    margin: 10px 0;
+
+}
+
+
+.result-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.result-grid div {
+
+    padding: 20px;
+
+    background: #f1f5f9;
+
+    border-radius: 8px;
+
+}
+
+
+.result-grid strong {
+
+    display: block;
+
+    font-size: 30px;
+
+}
+
+
+.result-grid span {
+
+    color: #666;
+
+}
+
+
+/* =========================
+   MOBILE / TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .exam-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .palette-section {
+
+        border-left: none;
+
+        border-top: 1px solid #ddd;
+
+    }
+
+
+    .exam-header {
+
+        height: auto;
+
+        padding: 15px;
+
+        gap: 10px;
+
+    }
+
+
+    .timer-box {
+
+        font-size: 16px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .login-box,
+    .instruction-box,
+    .result-box {
+
+        padding: 25px;
+
+    }
+
+
+    .navigation {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .navigation button {
+
+        flex: 1;
+
+    }
+
+}
