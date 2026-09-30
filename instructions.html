@@ -12,7 +12,7 @@
 
     <title>NEET CBT - Instructions</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -26,69 +26,116 @@
 
         <h2>General Instructions</h2>
 
+
         <ul>
 
-            <li>Total Questions: <strong>180</strong></li>
+            <li>
+                Total Questions:
+                <strong>180</strong>
+            </li>
 
-            <li>Total Marks: <strong>720</strong></li>
+            <li>
+                Total Marks:
+                <strong>720</strong>
+            </li>
 
-            <li>Duration: <strong>200 Minutes</strong></li>
+            <li>
+                Duration:
+                <strong>200 Minutes</strong>
+            </li>
 
-            <li>Correct Answer: <strong>+4 Marks</strong></li>
+            <li>
+                Correct Answer:
+                <strong>+4 Marks</strong>
+            </li>
 
-            <li>Incorrect Answer: <strong>-1 Mark</strong></li>
+            <li>
+                Incorrect Answer:
+                <strong>-1 Mark</strong>
+            </li>
 
-            <li>Unattempted: <strong>0 Marks</strong></li>
+            <li>
+                Unattempted:
+                <strong>0 Marks</strong>
+            </li>
 
-            <li>Each question has four options.</li>
+            <li>
+                Each question has four options.
+            </li>
 
-            <li>You can move to the Previous or Next question.</li>
+            <li>
+                You can move to the Previous
+                or Next question.
+            </li>
 
-            <li>You can review unanswered questions from the question palette.</li>
+            <li>
+                You can use the question palette
+                to move directly to any question.
+            </li>
 
-            <li>When the timer reaches zero, the exam will be automatically submitted.</li>
+            <li>
+                When the timer reaches zero,
+                the exam will be submitted automatically.
+            </li>
 
-            <li>After submission, answers cannot be changed.</li>
+            <li>
+                After submission,
+                answers cannot be changed.
+            </li>
 
         </ul>
+
 
         <div class="student-info">
 
             Student:
+
             <strong id="studentName"></strong>
 
         </div>
 
-        <button onclick="startExam()" class="start-btn">
 
+        <button
+            type="button"
+            onclick="startExam()"
+            class="start-btn"
+        >
             START EXAM
-
         </button>
 
     </div>
 
 </div>
 
+
 <script>
 
-const studentName = localStorage.getItem("studentName");
+    const studentName =
+        localStorage.getItem("studentName");
 
-if (!studentName) {
 
-    window.location.href = "index.html";
+    // If user comes here without login
+    if (!studentName) {
 
-}
+        window.location.href =
+            "index.html";
 
-document.getElementById("studentName").textContent = studentName;
+    }
 
-function startExam() {
 
-    window.location.href = "exam.html";
+    document.getElementById(
+        "studentName"
+    ).textContent = studentName;
 
-}
+
+    function startExam() {
+
+        window.location.href =
+            "exam.html";
+
+    }
 
 </script>
 
 </body>
-
 </html>
