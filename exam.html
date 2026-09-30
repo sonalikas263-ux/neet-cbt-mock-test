@@ -12,7 +12,7 @@
 
     <title>NEET CBT Exam</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -22,17 +22,22 @@
 
     <div>
 
-        <h2>NEET CBT MOCK TEST</h2>
+        <h2>
+            NEET CBT MOCK TEST
+        </h2>
 
         <span id="studentDisplay"></span>
 
     </div>
 
+
     <div class="timer-box">
 
-        Time Left:
+        <span>Time Left:</span>
 
-        <span id="timer">200:00</span>
+        <span id="timer">
+            200:00
+        </span>
 
     </div>
 
@@ -41,7 +46,10 @@
 
 <div class="exam-container">
 
-    <!-- QUESTION AREA -->
+
+    <!-- =========================
+         QUESTION AREA
+    ========================== -->
 
     <div class="question-section">
 
@@ -62,6 +70,7 @@
 
             <h3 id="questionText"></h3>
 
+
             <div id="optionsContainer"></div>
 
         </div>
@@ -70,20 +79,25 @@
         <div class="navigation">
 
             <button
+                type="button"
                 id="previousBtn"
                 onclick="previousQuestion()"
             >
                 Previous
             </button>
 
+
             <button
+                type="button"
                 onclick="clearResponse()"
                 class="clear-btn"
             >
                 Clear Response
             </button>
 
+
             <button
+                type="button"
                 onclick="nextQuestion()"
             >
                 Save & Next
@@ -94,37 +108,62 @@
     </div>
 
 
-    <!-- QUESTION PALETTE -->
+    <!-- =========================
+         QUESTION PALETTE
+    ========================== -->
 
     <div class="palette-section">
 
-        <h3>Question Palette</h3>
+        <h3>
+            Question Palette
+        </h3>
+
 
         <div class="legend">
 
             <div>
-                <span class="legend-box answered"></span>
+
+                <span
+                    class="legend-box answered"
+                ></span>
+
                 Answered
+
             </div>
 
+
             <div>
-                <span class="legend-box unattempted"></span>
+
+                <span
+                    class="legend-box unattempted"
+                ></span>
+
                 Unattempted
+
             </div>
 
+
             <div>
-                <span class="legend-box current"></span>
+
+                <span
+                    class="legend-box current"
+                ></span>
+
                 Current
+
             </div>
 
         </div>
+
 
         <div
             id="questionPalette"
             class="question-palette"
         ></div>
 
+
         <button
+            type="button"
             class="submit-btn"
             onclick="submitExam()"
         >
@@ -135,7 +174,8 @@
 
 </div>
 
-<script src="js/exam.js"></script>
+
+<script src="exam.js"></script>
 
 </body>
 
